@@ -9,5 +9,5 @@ Contents:
   1) Weekly homework and lab assignments from CSCI-2100 (Saint Louis University) 
   
 Primary Libraries (as of 9/07/20): 
-  1) <iostream> 
-  2) <math.h> 
+  1) < iostream > 
+  2) < math.h > 
