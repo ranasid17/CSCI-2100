@@ -1,6 +1,15 @@
 #include <iostream>
 using namespace std;
 
+// Input: 
+// The input consists of one or more data sets. Each set starts with a line containing an integer n, 1 ≤ n ≤ 10, followed by n pairs of values, one pair per line. 
+// The first value in a pair, s, is the speed in miles per hour and the second value, t, is the total elapsed time. 
+// Both s and t are integers, 1 ≤ s ≤ 90 and 1 ≤ t ≤ 12. The values for t are always in strictly increasing order. 
+// A value of -1 for n signals the end of the input.
+
+// Output: 
+// For each input set, print the distance driven, followed by a space, followed by the word "miles".
+
 int main()
 {
     // var to set number of rows to consider 
