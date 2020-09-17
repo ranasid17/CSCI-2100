@@ -4,7 +4,7 @@ using namespace std;
 int main()
 {
     // elts of each row of 2D array 
-    int elements[] = {5, 9, 12, 11, 7, 1, 3, 9, 0, 12, 2, 21, 8, 8, 16}; 
+    int elements[] = {5, 9, 12, 11, 7, 1, 3, 9, 0, 12, 2, 21, 8, 8, 16}; //given by problem
     // num rows for 2D array 
     int numRows = 4;
     // create pointer array, points to address of array of size numRows
@@ -34,7 +34,7 @@ int main()
     while ( queryRow >= 0 ) 
     {
         cin >> queryRow >> queryCol;
-        if (queryRow < 0) // end condition 
+        if (queryRow < 0) // termination condition , problem provides (-1 -1) as cue to finish
         {
            break; 
         }
@@ -42,7 +42,7 @@ int main()
         {
             cout << "out of bound" << endl; 
         }
-        else if ( queryCol >= numCols[queryRow]) // error if attempt to query beyond given row's cols
+        else if ( queryCol >= numCols[queryRow]) // error if attempt to query beyond a given row's numCols
         {
             cout << "out of bound" << endl; 
         }
@@ -51,5 +51,8 @@ int main()
             cout << arrPtrs[queryRow][queryCol] << endl; 
         }
     }
+    // clear memory 
+    delete [] numCols; 
+    delete [] arrPtrs; 
     return 0;
 }
