@@ -1,6 +1,28 @@
 #include <iostream>
 using namespace std;
 
+# Goal: Construct dynamic 2D array of integers
+# 1) Allow user to query elements of dynamic array with (row, col)
+# 2) Prompt user if input is OOB for each row and col 
+
+# Input: 
+#   4 : num rows 
+#   3 : num columns of first row 
+#   5 9 12 : elts in first row
+#   2 : num colums of second row 
+#   11 7 : elts in second row 
+#   6 : num colums of third row 
+#   1 3 9 0 12 2 : elts in second row 
+#   4 : num columns of fourth row 
+#   21 8 8 16 : elts in fourth row 
+
+# Output: 
+# Dyanmic 2D array of form: 
+# x x x 
+# x x 
+# x x x x x x 
+# x x x x 
+
 int main()
 {
     // elts of each row of 2D array 
@@ -20,10 +42,8 @@ int main()
     arrPtrs[3] = new int [numCols[3]]; //fourth "                              "
     // assign elts to each [row][col] of colPtrs
     int a =0; // counter 
-    for(int i=0; i<numRows; i++)
-    {
-        for(int j=0; j<numCols[i]; j++) 
-        {
+    for(int i=0; i<numRows; i++) {
+        for(int j=0; j<numCols[i]; j++){
             arrPtrs[i][j] = elements[a]; 
             a = a+1;
         }
@@ -31,23 +51,18 @@ int main()
     // init and store vars to query array 
     int queryRow = 0;
     int queryCol = 0; // refers to array index NOT overall row, col
-    while ( queryRow >= 0 ) 
-    {
+    while ( queryRow >= 0 ) {
         cin >> queryRow >> queryCol;
-        if (queryRow < 0) // termination condition , problem provides (-1 -1) as cue to finish
-        {
+        if (queryRow < 0) {// termination condition , problem provides (-1 -1) as cue to finish
            break; 
         }
-        else if (queryRow >= numRows) // error if attempt to query beyond 3rd (index) row 
-        {
+        else if { (queryRow >= numRows) // error if attempt to query beyond 3rd (index) row
             cout << "out of bound" << endl; 
         }
-        else if ( queryCol >= numCols[queryRow]) // error if attempt to query beyond a given row's numCols
-        {
+        else if ( queryCol >= numCols[queryRow]) { // error if attempt to query beyond a given row's numCols
             cout << "out of bound" << endl; 
         }
-        else // otherwise print queried [row][col] value
-        {
+        else {// otherwise print queried [row][col] value
             cout << arrPtrs[queryRow][queryCol] << endl; 
         }
     }
