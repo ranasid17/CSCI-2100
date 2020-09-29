@@ -3,6 +3,12 @@
 #include <string>
 using namespace std;
 
+# Goal: Given list of input names in ascending order of length, output names in 
+#  symmetrical order of length 
+# Ex: Jay, John, James, Jordan, Jeffrey ==> Jay, James, Jeffrey, Jordan, John
+# Input: See file stackSymmetricOrder_input.txt
+
+
 int main() { 
    stack<string> names; // initialize stack to store input names 
    
